@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import "tailwindcss/tailwind.css"
 import "./App.css"
+import { Routes, Route } from "react-router-dom"
 import ProjectList from "./components/ProjectList"
 import ProjectCard from "./components/ProjectCard"
 import About from "./components/About"
@@ -20,24 +21,6 @@ const App = () => {
 
   const isProjectsTab = window.location.pathname === "/Projects"
   const isHomeTab = window.location.pathname === "/"
-  let component
-  switch (window.location.pathname) {
-    case "/":
-      component = isGrid ? <ProjectCard /> : <ProjectList />
-      break
-    case "/Projects":
-      component = isGrid ? <ProjectCard /> : <ProjectList />
-      break
-    case "/About":
-      component = <About />
-      break
-    case "/Contact":
-      component = <Contact />
-      break
-    default:
-      component = <ProjectCard />
-      break
-  }
 
   return (
     <>
@@ -55,8 +38,13 @@ const App = () => {
                 />
               )}
             </div>
-            {component}
           </div>
+          <Routes>
+            <Route path="/" element={<ProjectCard />} />
+            <Route path="/Projects" element={<ProjectList />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Contact" element={<Contact />} />
+          </Routes>
         </div>
       </div>
     </>

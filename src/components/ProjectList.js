@@ -23,7 +23,6 @@ const ProjectList = () => {
   const handleModalToggle = (project) => {
     setModalOpen(!modalOpen)
     setCurrentProj(project)
-
     if (!modalOpen) {
       document.body.classList.add("modal-open")
     } else {

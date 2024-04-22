@@ -94,8 +94,11 @@ body {
 
 /* nav bar */
 
-.nav-links:hover {
-  color: #7f7f7f;
+.nav-links {
+  transition: color 0.3s ease;
+  &:hover {
+    color: #7f7f7f;
+  }
 }
 
 .active {
