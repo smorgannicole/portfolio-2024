@@ -14,8 +14,6 @@ body {
   height: 100%;
 }
 
-/* #bcb0c7 */
-
 .border {
   border: 1px solid #000;
   height: calc(100vh - 60px);
@@ -37,13 +35,21 @@ body {
   display: none;
 }
 
-.opacity-hover:hover {
+.hover:hover {
   opacity: 50%;
 }
 
 .transition {
   transition: opacity 0.3s ease;
   cursor: pointer;
+}
+
+.color-hover:hover {
+  color: #7f7f7f;
+}
+
+.color-transition {
+  transition: color 0.3s ease;
 }
 
 /* project cards */
@@ -86,20 +92,12 @@ body {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   margin-bottom: 40px;
-}
-
-.thumbnail:hover {
-  filter: none;
+  &:hover {
+    filter: none;
+  }
 }
 
 /* nav bar */
-
-.nav-links {
-  transition: color 0.3s ease;
-  &:hover {
-    color: #7f7f7f;
-  }
-}
 
 .active {
   color: #7f7f7f;
@@ -114,16 +112,6 @@ body {
 
 /* toggle */
 
-.toggle-cont {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-
-.toggle-img {
-  width: 100%;
-}
-
 .toggle-true {
   opacity: 50%;
 }
@@ -133,28 +121,23 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0.5rem 1rem;
-  border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   background-color: #e0e0e0;
   height: 29px;
   width: 50px;
-  border-radius: 1rem;
+  border-radius: 999dvh;
   transition: opacity 0.5s ease;
-}
-
-.toggle-button:first-child {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.toggle-button:last-child {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.toggle-button:hover {
-  opacity: 50%;
+  &:hover {
+    opacity: 50%;
+  }
+  &:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  &:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
 
 /* proj LIST */
@@ -178,15 +161,11 @@ body {
   top: -25px;
   left: -170px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease;
 }
 
 .map-list-item {
   align-items: center;
-}
-
-.major-span:hover {
-  cursor: pointer;
-  color: rgba(0, 0, 0, 0.3);
 }
 
 .unified-length {

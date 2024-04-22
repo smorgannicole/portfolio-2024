@@ -26,19 +26,31 @@ const NavBar = () => {
         <nav>
           <ul className="flex flex-col gap-1">
             <NavLink to="/">
-              <span className={`nav-links ${projectsActive ? "active" : ""}`}>
+              <span
+                className={`color-hover color-transition ${
+                  projectsActive ? "active" : ""
+                }`}
+              >
                 Projects
                 {projectsActive && <span> ✤</span>}
               </span>
             </NavLink>
             <NavLink to="/About">
-              <span className={`nav-links ${aboutActive ? "active" : ""}`}>
+              <span
+                className={`color-hover color-transition  ${
+                  aboutActive ? "active" : ""
+                }`}
+              >
                 About
                 {aboutActive && <span> ✤</span>}
               </span>
             </NavLink>
             <NavLink to="/Contact">
-              <span className={`nav-links ${contactActive ? "active" : ""}`}>
+              <span
+                className={`color-hover color-transition  ${
+                  contactActive ? "active" : ""
+                }`}
+              >
                 Contact
                 {contactActive && <span> ✤</span>}
               </span>

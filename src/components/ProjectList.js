@@ -158,21 +158,24 @@ const ProjectList = () => {
                 className="map-list-item whitespace-nowrap map-list-text"
                 style={{ textAlign: "right" }}
               >
-                {hoveredProject && hoveredProject.id === project.id && (
-                  <img
-                    className="map-list-img"
-                    src={project.image}
-                    alt={project.title}
-                    style={{
-                      top: project.title === "Park City" ? "-93px" : "-25px",
-                    }}
-                  />
-                )}
+                <img
+                  className="map-list-img"
+                  src={project.image}
+                  alt={project.title}
+                  style={{
+                    top: project.title === "Park City" ? "-93px" : "-25px",
+                    opacity:
+                      hoveredProject && hoveredProject === project.id
+                        ? "1"
+                        : "0",
+                  }}
+                />
                 <span
-                  onMouseEnter={() => setHoveredProject(project)}
+                  onMouseEnter={() => setHoveredProject(project.id)}
                   onMouseLeave={() => setHoveredProject(null)}
                   onClick={() => handleModalToggle(project)}
-                  className="major-span"
+                  className="color-hover color-transition"
+                  style={{ cursor: "pointer" }}
                 >
                   <span style={{ fontSize: 12, fontWeight: 900 }}>
                     {project.date} / {project.builtWith} /{" "}

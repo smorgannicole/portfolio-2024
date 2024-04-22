@@ -19,7 +19,7 @@ const Modal = ({ currentProj, handleModalToggle }) => {
           <FontAwesomeIcon
             onClick={() => handleModalToggle()}
             icon={faTimesCircle}
-            className="opacity-hover transition"
+            className="hover transition"
           />
         </div>
       </div>
