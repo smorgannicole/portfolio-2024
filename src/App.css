@@ -210,14 +210,67 @@ footer {
   z-index: 1;
 }
 
-.modal-cont {
-  position: absolute;
+.modal {
   background-color: #fff;
-  height: 60vh;
-  max-width: 80vw;
+  height: 75vh;
+  width: 90vw;
+  max-width: 88vw;
   z-index: 2;
+  overflow-y: scroll;
+  padding: 20vh 3vw;
+  display: flex;
+  justify-content: end;
 }
 
 .modal-open {
   overflow: hidden;
+}
+
+.modal-text-cont {
+  position: fixed;
+  top: 14vh;
+  left: 7vw;
+}
+
+.modal-image {
+  margin-bottom: 3vh;
+}
+
+.modal-title {
+  font-size: 6vh;
+  margin-top: 2vh;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.initial-position {
+  transform: translate(0, 0);
+  transition: transform 0.3s ease-out;
+}
+
+/* Define animation for hovered state */
+.hovered-animation {
+  transform: translate(10px, -10px);
+  transition: transform 0.3s ease-out;
+  transition: text-decoration 0.3s ease;
+}
+
+.modal-title-and-arrow {
+  position: relative;
+  cursor: pointer;
+}
+
+.modal-title-and-arrow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 1vh;
+  width: 0;
+  height: 0.25vh;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.modal-title-and-arrow:hover::after {
+  width: 91.5%;
 }
