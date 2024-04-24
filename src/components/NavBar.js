@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { NavLink, useLocation } from "react-router-dom"
 
-const NavBar = () => {
+const NavBar = ({ setIsGrid }) => {
   const location = useLocation()
   const [activeTab, setActiveTab] = useState("")
   const projectsActive = activeTab === "/" || activeTab === "/Projects"
@@ -15,7 +15,7 @@ const NavBar = () => {
     <>
       <div className="nav-elements bg-none">
         <div className="flex mb-5 mt-6">
-          <NavLink to="/">
+          <NavLink to="/" onClick={() => setIsGrid(true)}>
             <span className="text-3xl" style={{ color: "black" }}>
               Morgan
               <br />

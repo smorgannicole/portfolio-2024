@@ -30,6 +30,7 @@ import vv5 from "./images/vv5.png"
 const App = () => {
   const [toggleShow, setToggleShow] = useState(false)
   const location = useLocation()
+  const [isGrid, setIsGrid] = useState(true)
 
   useEffect(() => {
     if (location.pathname === "/Projects" || location.pathname === "/") {
@@ -52,6 +53,25 @@ const App = () => {
         images: [vibeVillasPath, vv1, vv3, vv4, vv5],
         repoUrl:
           "https://github.com/learn-academy-2024-alpha/apartment-app-frontend-the-smiths",
+        description: (
+          <span>
+            A React and Rails API project with a PostgreSQL database. User
+            authentication and authorization are handled via Devise and JWT,
+            enabling users to list units for rent and manage their listings.
+            Visitors can view available units, access unit info, and engage in
+            listing management functionalities upon logging in.
+            <br />
+            <a
+              className="text-gray-500"
+              href="https://github.com/mark19242"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Mark Smith
+            </a>{" "}
+            contributed to this project.
+          </span>
+        ),
       },
       {
         id: 10,
@@ -200,7 +220,7 @@ const App = () => {
       <div className="page-wrapper">
         <div className="border flex">
           <div className="w-1/5">
-            <NavBar />
+            <NavBar setIsGrid={setIsGrid} />
           </div>
           <div
             className="w-4/5"
@@ -210,7 +230,7 @@ const App = () => {
               className="toggle-cont flex mt-8"
               style={{ justifyContent: "end" }}
             >
-              {toggleShow && <Toggle />}
+              {toggleShow && <Toggle isGrid={isGrid} setIsGrid={setIsGrid} />}
             </div>
             <Routes>
               <Route path="/" element={<ProjectCard projects={projects} />} />

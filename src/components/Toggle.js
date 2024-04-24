@@ -1,11 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import gridPath from "../images/grid.png"
 import rowPath from "../images/column.png"
 import { Link } from "react-router-dom"
 
-const Toggle = () => {
-  const [isGrid, setIsGrid] = useState(true)
-
+const Toggle = ({ isGrid, setIsGrid }) => {
   return (
     <>
       <Link to="/">
