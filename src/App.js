@@ -46,6 +46,9 @@ import roll2 from "./images/roll2.png"
 import roll3 from "./images/roll3.png"
 import roll4 from "./images/roll4.png"
 import roll5 from "./images/roll5.png"
+import shroom1 from "./images/shroom1.png"
+import shroom2 from "./images/shroom2.png"
+import shroom3 from "./images/shroom3.png"
 
 const App = () => {
   const [toggleShow, setToggleShow] = useState(false)
@@ -214,8 +217,18 @@ const App = () => {
         builtWith: "React",
         builtWithArray: ["React"],
         image: mushroomPath,
+        images: [shroom1, shroom2, shroom3],
         repoUrl:
           "https://github.com/learn-academy-2024-alpha/treasure-hunt-smorgannicole",
+        description: (
+          <span>
+            A React project where mushrooms appear in randomized locations
+            during each game. Players must rely on luck to select the elusive
+            magic mushroom, which changes every playthrough, in under five
+            tries. As users click to pick mushrooms, they are moved to a basket
+            while their randomized descriptions are recorded in a notebook.
+          </span>
+        ),
       },
       {
         id: 14,
