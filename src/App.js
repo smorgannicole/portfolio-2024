@@ -37,6 +37,15 @@ import t3 from "./images/t3.png"
 import pho4 from "./images/pho4.png"
 import pho2 from "./images/pho2.png"
 import pho3 from "./images/pho3.png"
+import dreams1 from "./images/dreams1.png"
+import dreams2 from "./images/dreams2.png"
+import dreams3 from "./images/dreams3.png"
+import dreams4 from "./images/dreams4.png"
+import roll1 from "./images/roll1.png"
+import roll2 from "./images/roll2.png"
+import roll3 from "./images/roll3.png"
+import roll4 from "./images/roll4.png"
+import roll5 from "./images/roll5.png"
 
 const App = () => {
   const [toggleShow, setToggleShow] = useState(false)
@@ -155,8 +164,26 @@ const App = () => {
         builtWith: "Ruby",
         builtWithArray: ["Ruby"],
         image: hoodDreamPath,
+        images: [dreams1, dreams2, dreams3, dreams4],
         repoUrl:
           "https://github.com/learn-academy-2024-alpha/text-based-game-team-ms",
+        description: (
+          <span>
+            A text-based game where users immerse themselves in interactive
+            fiction. User interactions from the IRB console drive the narrative
+            forward.
+            <br />
+            <a
+              className="text-gray-500"
+              href="https://github.com/mark19242"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Mark Smith
+            </a>{" "}
+            contributed to this project.
+          </span>
+        ),
       },
       {
         id: 13,
@@ -209,7 +236,16 @@ const App = () => {
         builtWith: "React",
         builtWithArray: ["React"],
         image: dicePath,
+        images: [roll1, roll2, roll3, roll4, roll5],
         repoUrl: "https://github.com/smorgannicole/dice-roll",
+        description: (
+          <span>
+            A react app where each roll corresponds to graphics and colors on a
+            particular die. Users may switch between different themed dice and
+            roll a new set of six corresponding emojis. Rolls are logged may be
+            cleared at any time.
+          </span>
+        ),
       },
       {
         id: 5,
