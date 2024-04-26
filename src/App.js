@@ -26,13 +26,31 @@ import vv1 from "./images/vv1.png"
 import vv3 from "./images/vv3.png"
 import vv4 from "./images/vv4.png"
 import vv5 from "./images/vv5.png"
+import tinder1 from "./images/tinder1.png"
+import tinder2 from "./images/tinder2.png"
+import tinder3 from "./images/tinder3.png"
+import tinder4 from "./images/tinder4.png"
+import tinder5 from "./images/tinder5.png"
+import t1 from "./images/t1.png"
+import t2 from "./images/t2.png"
+import t3 from "./images/t3.png"
+import pho4 from "./images/pho4.png"
+import pho2 from "./images/pho2.png"
+import pho3 from "./images/pho3.png"
 
 const App = () => {
   const [toggleShow, setToggleShow] = useState(false)
   const location = useLocation()
   const [isGrid, setIsGrid] = useState(true)
+  const [isHome, setIsHome] = useState(true)
 
   useEffect(() => {
+    if (location.pathname === "/") {
+      setIsHome(true)
+    } else {
+      setIsHome(false)
+    }
+
     if (location.pathname === "/Projects" || location.pathname === "/") {
       setToggleShow(true)
     } else {
@@ -81,7 +99,15 @@ const App = () => {
         builtWith: "React / SCSS",
         builtWithArray: ["React", "SCSS"],
         image: phoPath,
+        images: [phoPath, pho2, pho3, pho4],
         repoUrl: "https://github.com/smorgannicole/simple-as-pho",
+        description: (
+          <span>
+            A React app where users can add and delete items from their carts.
+            Interactive modals showcase food items illustrated using Adobe
+            Fresco.
+          </span>
+        ),
       },
       {
         id: 2,
@@ -93,6 +119,33 @@ const App = () => {
         image: catTinderPath,
         repoUrl:
           "https://github.com/learn-academy-2024-alpha/cat-tinder-frontend-ryan-amir-morgan",
+        images: [catTinderPath, tinder1, tinder2, tinder3, tinder4, tinder5],
+        description: (
+          <span>
+            A full-stack, decoupled application with a PostgreSQL database.
+            Users can view, heart, edit, add , and delete kitties. Kitties may
+            be filtered by age and searched by name.
+            <br />
+            <a
+              className="text-gray-500"
+              href="https://github.com/Rashadjaxon"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Amir Jackson
+            </a>{" "}
+            and{" "}
+            <a
+              className="text-gray-500"
+              href="https://github.com/Rlemus93"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Ryan Lemus
+            </a>{" "}
+            contributed to this project.
+          </span>
+        ),
       },
       {
         id: 4,
@@ -166,7 +219,14 @@ const App = () => {
         builtWith: "React / Boonaki Tea API",
         builtWithArray: ["React", "Boonaki Tea API"],
         image: teaPath,
+        images: [teaPath, t1, t2, t3],
         repoUrl: "https://github.com/smorgannicole/tea-react-project",
+        description: (
+          <span>
+            A React app where visitors access tea info via the Boonaki API. Tea
+            enthusiasts can add, delete, and edit teas, all stored locally.
+          </span>
+        ),
       },
       {
         id: 8,
@@ -233,7 +293,10 @@ const App = () => {
               {toggleShow && <Toggle isGrid={isGrid} setIsGrid={setIsGrid} />}
             </div>
             <Routes>
-              <Route path="/" element={<ProjectCard projects={projects} />} />
+              <Route
+                path="/"
+                element={<ProjectCard projects={projects} isHome={isHome} />}
+              />
               <Route
                 path="/Projects"
                 element={<ProjectList projects={projects} />}

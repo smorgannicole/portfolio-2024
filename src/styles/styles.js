@@ -17,21 +17,14 @@ export const CarouselWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 45vh;
+    left: 20vw;
 
     .btn-arrow {
       border: none;
       background: none;
       padding: 11px 20px;
-      position: absolute;
-      top: 45vh;
-    }
-
-    .reg-arrow {
-      left: 28vw;
-    }
-
-    .reverse-arrow {
-      left: 20.1vw;
     }
 
     .reverse-arrow {
@@ -39,10 +32,6 @@ export const CarouselWrapper = styled.div`
     }
 
     .dot-group {
-      position: absolute;
-      top: 46vh;
-      left: 23vw;
-
       .carousel__dot {
         width: 8px;
         height: 8px;
@@ -71,11 +60,24 @@ export const ModalWrapper = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    z-index: 2;
+  }
+
+  .modal-overlay-home {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
   }
 
   .modal {
@@ -104,46 +106,25 @@ export const ModalWrapper = styled.div`
 
   .modal-title {
     font-size: 6vh;
-    cursor: pointer;
     width: fit-content;
-  }
-
-  .initial-position {
-    transform: translate(0, 0);
-    transition: transform 0.3s ease-out;
-  }
-
-  .hovered-animation {
-    transform: translate(10px, -10px);
-    transition: transform 0.3s ease-out;
-    transition-property: transform, text-decoration;
-    transition-duration: 0.3s;
+    line-height: 1;
   }
 
   .modal-title-and-badges {
     flex-direction: column;
-    position: relative;
     margin-left: 2vh;
     justify-content: center;
-  }
-
-  .line-cool::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 7vh;
-    width: 0;
-    height: 0.25vh;
-    background-color: black;
-    transition: width 0.3s ease;
-  }
-
-  .line-cool:hover::after {
-    position: absolute;
-    width: 81.5%;
+    position: relative;
   }
 
   .modal-x {
     height: 2.5vh;
+  }
+
+  .view-repo {
+    margin-top: -0.25vh;
+    margin-bottom: 2vh;
+    font-size: 2vh;
+    width: fit-content;
   }
 `

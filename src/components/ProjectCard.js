@@ -3,7 +3,7 @@ import { css } from "@emotion/react"
 import { SyncLoader } from "react-spinners"
 import Modal from "./Modal"
 
-const ProjectCard = ({ projects }) => {
+const ProjectCard = ({ projects, isHome }) => {
   const [imagesLoaded, setImagesLoaded] = useState(false)
   const [modalOpen, setModalOpen] = useState(false)
   const [currentProj, setCurrentProj] = useState(null)
@@ -45,19 +45,19 @@ const ProjectCard = ({ projects }) => {
       {imagesLoaded ? (
         <div className="card-cont columns-1 gap-10 sm:columns-2 lg:columns-3">
           {sortedProjects.map((project) => (
-            <div className="thumbnail-wrapper" key={project.id}>
-              <img
-                className="thumbnail"
-                src={project.image}
-                alt={project.alt}
-                onClick={() => handleModalToggle(project)}
-              />
-            </div>
+            <img
+              className="thumbnail"
+              src={project.image}
+              alt={project.alt}
+              key={project.id}
+              onClick={() => handleModalToggle(project)}
+            />
           ))}
           {modalOpen && (
             <Modal
               currentProj={currentProj}
               handleModalToggle={handleModalToggle}
+              isHome={isHome}
             />
           )}
         </div>

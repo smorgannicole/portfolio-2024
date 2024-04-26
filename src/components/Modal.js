@@ -1,11 +1,11 @@
-import React, { useRef, useState } from "react"
+import React, { useRef, useEffect, useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimesCircle } from "@fortawesome/free-regular-svg-icons"
 import Carousel from "./Carousel.js"
 import { ModalWrapper } from "../styles/styles.js"
+import OpenInNewIcon from "@mui/icons-material/OpenInNew"
 
-const Modal = ({ currentProj, handleModalToggle }) => {
-  const [hovered, setHovered] = useState(false)
+const Modal = ({ currentProj, handleModalToggle, isHome }) => {
   const modalRef = useRef(null)
   const carouselRef = useRef(null)
 
@@ -19,9 +19,14 @@ const Modal = ({ currentProj, handleModalToggle }) => {
     }
   }
 
+  console.log(isHome)
+
   return (
     <ModalWrapper>
-      <div className="modal-overlay" onMouseDown={handleOverlayClick}>
+      <div
+        className={isHome ? "modal-overlay-home" : "modal-overlay"}
+        onMouseDown={handleOverlayClick}
+      >
         <div ref={modalRef} className="modal">
           <div
             className="flex mt-1"
@@ -40,40 +45,22 @@ const Modal = ({ currentProj, handleModalToggle }) => {
                 justifyContent: "space-between",
               }}
             >
-              <div className="modal-title-and-badges flex w-2/5">
-                <div className="line-cool flex">
-                  <a
-                    href={currentProj?.repoUrl}
-                    className="modal-title"
-                    onMouseEnter={() => setHovered(true)}
-                    onMouseLeave={() => setHovered(false)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {currentProj?.title}
-                  </a>
-                  <span
-                    className={`flex ${
-                      hovered ? "hovered-animation" : "initial-position"
-                    }`}
-                    style={{ alignItems: "end", paddingBottom: "2vh" }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="w-6 h-6"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
-                      />
-                    </svg>
-                  </span>
+              <div
+                className="modal-title-and-badges flex w-2/5"
+                style={{ paddingRight: "1vw" }}
+              >
+                <div className="flex">
+                  <p className="modal-title">{currentProj?.title}</p>
                 </div>
+                <a
+                  href={currentProj?.repoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="view-repo transition hover"
+                >
+                  View Repo
+                  <OpenInNewIcon style={{ height: "2.5vh" }} />
+                </a>
                 <ul className="flex gap-2">
                   {currentProj.builtWithArray.map((item, index) => (
                     <li key={index}>

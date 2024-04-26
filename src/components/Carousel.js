@@ -15,7 +15,9 @@ class MyCarousel extends React.Component {
   render() {
     const { currentProj } = this.props
     const { carouselRef } = this.props
+
     const totalSlides = currentProj.images ? currentProj.images.length : 0
+
     return (
       <CarouselWrapper>
         <CarouselProvider
