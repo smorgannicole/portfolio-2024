@@ -13,7 +13,7 @@ import ajaxPath from "./images/ajax-tools-cropped.jpg"
 import cosmicPath from "./images/cosmic-coffee-cropped.jpg"
 import mediaQueryPath from "./images/media-query.jpg"
 import teaPath from "./images/tea.png"
-import ticTacToePath from "./images/tic-tac-toe.png"
+import ticTacToePath from "./images/ttt1.png"
 import pigPath from "./images/pig-translator.png"
 import roboPath from "./images/robo-ear.png"
 import dicePath from "./images/dice-game-cropped.png"
@@ -49,6 +49,11 @@ import roll5 from "./images/roll5.png"
 import shroom1 from "./images/shroom1.png"
 import shroom2 from "./images/shroom2.png"
 import shroom3 from "./images/shroom3.png"
+import ttt2 from "./images/ttt2.png"
+import ttt3 from "./images/ttt3.png"
+import ttt4 from "./images/ttt4.png"
+import ttt5 from "./images/ttt5.png"
+import ttt6 from "./images/ttt6.png"
 
 const App = () => {
   const [toggleShow, setToggleShow] = useState(false)
@@ -160,6 +165,33 @@ const App = () => {
         ),
       },
       {
+        id: 6,
+        alt: "tic tac toe game",
+        date: "Mar. 2024",
+        title: "Sidewalk tic-tac-toe",
+        builtWith: "React",
+        builtWithArray: ["React"],
+        image: ticTacToePath,
+        images: [ticTacToePath, ttt2, ttt3, ttt4, ttt5, ttt6],
+        repoUrl: "https://github.com/smorgannicole/sidewalk-tic-tac-toe",
+        description: (
+          <span>
+            A React app where users can engage in tic-tac-toe matches against
+            one another. Hand-drawn elements were created using
+            <a
+              className="text-gray-500"
+              href="https://www.adobe.com/products/fresco.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              Adobe Fresco
+            </a>
+            .
+          </span>
+        ),
+      },
+      {
         id: 4,
         alt: "hood dreams text-based game",
         date: "Mar. 2024",
@@ -189,17 +221,6 @@ const App = () => {
         ),
       },
       {
-        id: 13,
-        alt: "tic tac toe game",
-        date: "Mar. 2024",
-        title: "Tic Tac Techies",
-        builtWith: "JS",
-        builtWithArray: ["JS"],
-        image: ticTacToePath,
-        repoUrl:
-          "https://github.com/learn-academy-2024-alpha/tic-tac-toe-tic-tac-techies",
-      },
-      {
         id: 7,
         alt: "robo active listening",
         date: "Feb. 2024",
@@ -210,7 +231,7 @@ const App = () => {
         repoUrl: "https://github.com/smorgannicole/robo-ear",
       },
       {
-        id: 11,
+        id: 12,
         alt: "magic mushroom hunt",
         date: "Feb. 2024",
         title: "Mushroom Hunt",
@@ -242,7 +263,7 @@ const App = () => {
           "https://github.com/learn-academy-2024-alpha/pig-latin-pink-m-m-s",
       },
       {
-        id: 6,
+        id: 11,
         alt: "dice roll game",
         date: "Feb. 2024",
         title: "Dice Roll",
@@ -310,7 +331,7 @@ const App = () => {
           "https://github.com/smorgannicole/codeup-web-exercises/blob/main/data/ajax-store.html",
       },
       {
-        id: 12,
+        id: 13,
         alt: "media query",
         date: "Oct. 2023",
         title: "Park City",
@@ -333,7 +354,11 @@ const App = () => {
           </div>
           <div
             className="w-4/5"
-            style={{ height: "fit-content", overflowY: "scroll" }}
+            style={{
+              height: "fit-content",
+              overflowY: "scroll",
+              padding: "5vh 1vw",
+            }}
           >
             <div
               className="toggle-cont flex mt-8"
