@@ -87,6 +87,8 @@ export const ModalWrapper = styled.div`
     z-index: 2;
     padding: 3vh 2vw;
     border-radius: 3vh;
+    overflow-y: hidden;
+    position: relative;
   }
 
   .modal-open {

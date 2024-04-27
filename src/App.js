@@ -274,7 +274,7 @@ const App = () => {
         repoUrl: "https://github.com/smorgannicole/dice-roll",
         description: (
           <span>
-            A react app where each roll corresponds to graphics and colors on a
+            A React app where each roll corresponds to graphics and colors on a
             particular die. Users may switch between different themed dice and
             roll a new set of six corresponding emojis. Rolls are logged may be
             cleared at any time.
@@ -357,7 +357,7 @@ const App = () => {
             style={{
               height: "fit-content",
               overflowY: "scroll",
-              padding: "5vh 1vw",
+              padding: "6vh 1.5vw",
             }}
           >
             <div
