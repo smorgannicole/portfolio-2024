@@ -42,11 +42,11 @@ class MyCarousel extends React.Component {
           </div>
           <div className="controls">
             <ButtonBack className="btn-arrow reverse-arrow">
-              <img src={arrow} alt="arrow" />
+              <img src={arrow} alt="arrow" className="transition hover" />
             </ButtonBack>
             <DotGroup className="dot-group" />
             <ButtonNext className="btn-arrow reg-arrow">
-              <img src={arrow} alt="arrow" />
+              <img src={arrow} alt="arrow" className="transition hover" />
             </ButtonNext>
           </div>
         </CarouselProvider>

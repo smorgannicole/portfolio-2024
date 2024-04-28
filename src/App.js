@@ -8,16 +8,9 @@ import About from "./components/About"
 import Contact from "./components/Contact"
 import NavBar from "./components/NavBar"
 import Toggle from "./components/Toggle"
-import weathermapPath from "./images/weather-map.jpg"
-import ajaxPath from "./images/ajax-tools-cropped.jpg"
-import cosmicPath from "./images/cosmic-coffee-cropped.jpg"
-import mediaQueryPath from "./images/media-query.jpg"
+import media1 from "./images/media1.png"
 import teaPath from "./images/tea.png"
 import ticTacToePath from "./images/ttt1.png"
-import pigPath from "./images/pig-translator.png"
-import roboPath from "./images/robo-ear.png"
-import dicePath from "./images/dice-game-cropped.png"
-import mushroomPath from "./images/treasure-hunt.png"
 import hoodDreamPath from "./images/hood-dreams.png"
 import phoPath from "./images/simple-as-pho.png"
 import catTinderPath from "./images/cat-tinder.png"
@@ -54,6 +47,39 @@ import ttt3 from "./images/ttt3.png"
 import ttt4 from "./images/ttt4.png"
 import ttt5 from "./images/ttt5.png"
 import ttt6 from "./images/ttt6.png"
+import map1 from "./images/map1.png"
+import map2 from "./images/map2.png"
+import map3 from "./images/map3.png"
+import map4 from "./images/map4.png"
+import robo1 from "./images/robo1.png"
+import robo2 from "./images/robo2.png"
+import robo3 from "./images/robo3.png"
+import robo4 from "./images/robo4.png"
+import robo5 from "./images/robo5.png"
+import robo6 from "./images/robo6.png"
+import pig1 from "./images/pig1.png"
+import pig2 from "./images/pig2.png"
+import pig3 from "./images/pig3.png"
+import pig4 from "./images/pig4.png"
+import cc1 from "./images/cc1.png"
+import cc2 from "./images/cc2.png"
+import cc3 from "./images/cc3.png"
+import cc4 from "./images/cc4.png"
+import cc5 from "./images/cc5.png"
+import cc6 from "./images/cc6.png"
+import cc7 from "./images/cc7.png"
+import ajax1 from "./images/ajax1.png"
+import ajax2 from "./images/ajax2.png"
+import ajax3 from "./images/ajax3.png"
+import ajax4 from "./images/ajax4.png"
+import ajax5 from "./images/ajax5.png"
+import ajax6 from "./images/ajax6.png"
+import media2 from "./images/media2.png"
+import media3 from "./images/media3.png"
+import media4 from "./images/media4.png"
+import media5 from "./images/media5.png"
+import media6 from "./images/media6.png"
+import media7 from "./images/media7.png"
 
 const App = () => {
   const [toggleShow, setToggleShow] = useState(false)
@@ -227,8 +253,28 @@ const App = () => {
         title: "Active Listening",
         builtWith: "React",
         builtWithArray: ["React"],
-        image: roboPath,
+        image: robo6,
+        images: [robo1, robo2, robo3, robo4, robo5, robo6],
         repoUrl: "https://github.com/smorgannicole/robo-ear",
+        description: (
+          <span>
+            A React app that features four "robots" that dynamically respond to
+            user input in real-time. "Good Robot" echoes the user's input
+            exactly, "Bad Robot" mimics the input with a repetitive "BLABLA..."
+            pattern, and the third and fourth robots respond the same no matter
+            the input.
+            <br />
+            <a
+              className="text-gray-500"
+              href="https://github.com/Louie-cpu"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Louis Moreno
+            </a>{" "}
+            contributed to this project.
+          </span>
+        ),
       },
       {
         id: 12,
@@ -237,7 +283,7 @@ const App = () => {
         title: "Mushroom Hunt",
         builtWith: "React",
         builtWithArray: ["React"],
-        image: mushroomPath,
+        image: shroom1,
         images: [shroom1, shroom2, shroom3],
         repoUrl:
           "https://github.com/learn-academy-2024-alpha/treasure-hunt-smorgannicole",
@@ -252,24 +298,30 @@ const App = () => {
         ),
       },
       {
-        id: 14,
+        id: 13,
         alt: "pig latin translator",
         date: "Feb. 2024",
         title: "Pig Latin Translator",
         builtWith: "React / Tailwind",
         builtWithArray: ["React", "Tailwind"],
-        image: pigPath,
-        repoUrl:
-          "https://github.com/learn-academy-2024-alpha/pig-latin-pink-m-m-s",
+        image: pig4,
+        images: [pig1, pig2, pig3, pig4],
+        repoUrl: "https://github.com/smorgannicole/pig-latin-translator",
+        description: (
+          <span>
+            A React app that translates english words into pig latin. English
+            and pig latin words are logged.
+          </span>
+        ),
       },
       {
-        id: 11,
+        id: 3,
         alt: "dice roll game",
         date: "Feb. 2024",
         title: "Dice Roll",
         builtWith: "React",
         builtWithArray: ["React"],
-        image: dicePath,
+        image: roll1,
         images: [roll1, roll2, roll3, roll4, roll5],
         repoUrl: "https://github.com/smorgannicole/dice-roll",
         description: (
@@ -305,41 +357,87 @@ const App = () => {
         title: "Cosmic Coffee",
         builtWith: "JS",
         builtWithArray: ["JS"],
-        image: cosmicPath,
+        image: cc1,
+        images: [cc1, cc2, cc3, cc4, cc5, cc6, cc7],
         repoUrl: "https://github.com/pennington-smith/coffee-project",
+        description: (
+          <span>
+            A React app where users can search coffees by name or filter by
+            roast. Coffee cards may be clicked and "flipped" to reveal more
+            info. The app enables users to create, edit, and delete their own
+            custom coffees, stored locally for convenience.
+            <br />
+            <a
+              className="text-gray-500"
+              href="https://github.com/penningtron"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Nathan Pennington
+            </a>{" "}
+            contributed to this project.
+          </span>
+        ),
       },
       {
-        id: 3,
+        id: 11,
         alt: "weather-app",
         date: "Nov. 2023",
         title: "Weather Map",
         builtWith: "JS / OpenWeather API / Mapbox API",
         builtWithArray: ["JS", "OpenWeather API", "Mapbox API"],
-        image: weathermapPath,
+        image: map1,
+        images: [map1, map2, map3, map4],
         repoUrl:
           "https://github.com/smorgannicole/codeup-web-exercises/blob/main/js/weather_map.js",
+        description: (
+          <span>
+            Built using HTML, CSS, and JavaScript. OpenWeatherMap API is used to
+            display weather info in a specific location. Users can search for
+            desired locations with the forecast updating dynamically. Mapbox API
+            is used to visually transition from the previous location to the
+            newly searched one.
+          </span>
+        ),
       },
       {
         id: 9,
         alt: "ajax tools",
         date: "Nov. 2023",
-        title: "Ajax Rental Tools",
+        title: "Ajax Tools",
         builtWith: "JS",
         builtWithArray: ["JS"],
-        image: ajaxPath,
+        image: ajax1,
+        images: [ajax1, ajax2, ajax3, ajax4, ajax5, ajax6],
         repoUrl:
           "https://github.com/smorgannicole/codeup-web-exercises/blob/main/data/ajax-store.html",
+        description: (
+          <span>
+            Built using HTML, CSS, and JavaScript. Designed to simulate API
+            requests, this application retrieves tool objects from a JSON file,
+            mimicking working with external data sources.
+          </span>
+        ),
       },
       {
-        id: 13,
+        id: 14,
         alt: "media query",
         date: "Oct. 2023",
         title: "Park City",
-        builtWith: "Bootstrap",
-        builtWithArray: ["CSS", "HTML", "Bootstrap"],
-        image: mediaQueryPath,
+        builtWith: "HTML / CSS / Bootstrap",
+        builtWithArray: ["HTML", "CSS", "Bootstrap"],
+        image: media1,
+        images: [media1, media2, media3, media4, media5, media6, media7],
         repoUrl:
           "https://github.com/smorgannicole/codeup-web-exercises/blob/main/css/media-queries-exercise.css",
+        description: (
+          <span>
+            Designed as a platform for honing proficiency in media queries, this
+            project presents three wireframes of layouts to be replicated. The
+            objective is to rebuild the site from scratch with detail and
+            precision.
+          </span>
+        ),
       },
     ],
     []
@@ -357,7 +455,8 @@ const App = () => {
             style={{
               height: "fit-content",
               overflowY: "scroll",
-              padding: "6vh 1.5vw",
+              padding: "0 1.5vw",
+              paddingBottom: "4.5vh",
             }}
           >
             <div

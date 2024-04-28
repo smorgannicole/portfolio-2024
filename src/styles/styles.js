@@ -18,13 +18,12 @@ export const CarouselWrapper = styled.div`
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 45vh;
-    left: 20vw;
+    top: 46.5vh;
+    left: 22vw;
 
     .btn-arrow {
       border: none;
       background: none;
-      padding: 11px 20px;
     }
 
     .reverse-arrow {
@@ -32,12 +31,14 @@ export const CarouselWrapper = styled.div`
     }
 
     .dot-group {
+      margin: 0 0.5vw;
+
       .carousel__dot {
         width: 8px;
         height: 8px;
         border: none;
         border-radius: 50%;
-        margin: 0 4px;
+        margin: 0 0.25vw;
         padding: 0;
         background-color: #d1c4b6;
       }

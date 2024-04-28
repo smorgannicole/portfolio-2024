@@ -19,7 +19,8 @@ body {
   height: calc(100vh - 60px);
   width: calc(100vw - 60px);
   box-sizing: border-box;
-  padding: 0 30px;
+  padding-left: 1.5vw;
+  padding-right: 1vw;
   margin: 30px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -152,7 +153,6 @@ body {
 .map-list-img {
   width: 290px;
   position: absolute;
-  top: -25px;
   left: -170px;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
   transition: opacity 0.3s ease;

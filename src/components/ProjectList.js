@@ -48,7 +48,7 @@ const ProjectList = ({ projects }) => {
                   src={project.image}
                   alt={project.title}
                   style={{
-                    top: project.title === "Park City" ? "-93px" : "-25px",
+                    top: project.title === "Park City" ? "-10vh" : "-5vh",
                     opacity:
                       hoveredProject && hoveredProject === project.id
                         ? "1"
