@@ -46,7 +46,7 @@ const About = () => {
             <p style={{ fontSize: "2.1vh", marginBottom: "1vh" }}>
               I was first introduced to coding in my CS Fundamentals class
               during my second year of college— I finished with a C. Five years
-              later I attended both Codeup and LEARN academy, full stack web
+              later I attended both Codeup and LEARN Academy, full stack web
               development bootcamps. Despite Codeup's closure midway through the
               course, I was able to further solidify my skills in frontend
               languages such as HTML, CSS, JavaScript, and React during my time

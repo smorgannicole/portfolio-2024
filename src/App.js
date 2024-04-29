@@ -626,14 +626,13 @@ const App = () => {
   return (
     <>
       <div className="page-wrapper">
-        <div className="border flex">
+        <div className="border flex" style={{ overflowY: "scroll" }}>
           <div className="w-1/5">
             <NavBar setIsGrid={setIsGrid} />
           </div>
           <div
             className="w-4/5"
             style={{
-              overflowY: "scroll",
               padding: "0 1.5vw",
               paddingBottom: "4.5vh",
               alignItems: location.pathname === "/About" ? "end" : "",
