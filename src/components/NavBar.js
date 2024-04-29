@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { NavLink, useLocation } from "react-router-dom"
+import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome"
 
 const NavBar = ({ setIsGrid }) => {
   const location = useLocation()
@@ -32,7 +33,12 @@ const NavBar = ({ setIsGrid }) => {
                 }`}
               >
                 Projects
-                {projectsActive && <span> ✤</span>}
+                {projectsActive && (
+                  <span>
+                    {" "}
+                    <AutoAwesomeIcon style={{ paddingBottom: "0.25vh" }} />
+                  </span>
+                )}
               </span>
             </NavLink>
             <NavLink to="/About">
@@ -40,9 +46,17 @@ const NavBar = ({ setIsGrid }) => {
                 className={`color-hover color-transition  ${
                   aboutActive ? "active" : ""
                 }`}
+                style={{
+                  color: location.pathname === "/About" ? "#AFA195" : "",
+                }}
               >
                 About
-                {aboutActive && <span> ✤</span>}
+                {aboutActive && (
+                  <span>
+                    {" "}
+                    <AutoAwesomeIcon style={{ paddingBottom: "0.25vh" }} />
+                  </span>
+                )}
               </span>
             </NavLink>
             <NavLink to="/Contact">
@@ -52,7 +66,12 @@ const NavBar = ({ setIsGrid }) => {
                 }`}
               >
                 Contact
-                {contactActive && <span> ✤</span>}
+                {contactActive && (
+                  <span>
+                    {" "}
+                    <AutoAwesomeIcon style={{ paddingBottom: "0.25vh" }} />
+                  </span>
+                )}
               </span>
             </NavLink>
           </ul>

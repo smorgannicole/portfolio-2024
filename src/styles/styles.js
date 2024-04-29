@@ -130,4 +130,10 @@ export const ModalWrapper = styled.div`
     font-size: 2vh;
     width: fit-content;
   }
+
+  .palette-cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 `

@@ -19,8 +19,6 @@ const Modal = ({ currentProj, handleModalToggle, isHome }) => {
     }
   }
 
-  console.log(isHome)
-
   return (
     <ModalWrapper>
       <div
@@ -28,9 +26,21 @@ const Modal = ({ currentProj, handleModalToggle, isHome }) => {
         onMouseDown={handleOverlayClick}
       >
         <div ref={modalRef} className="modal">
+          <div className="flex palette-cont">
+            {currentProj.palette?.map((color, index) => (
+              <div
+                key={index}
+                style={{
+                  backgroundColor: color,
+                  height: "2vh",
+                  width: "5.5vw",
+                }}
+              ></div>
+            ))}
+          </div>
           <div
             className="flex mt-1"
-            style={{ width: "100%", position: "relative" }}
+            style={{ width: "100%", position: "relative", height: "20vh" }}
           >
             <FontAwesomeIcon
               onClick={() => handleModalToggle()}
@@ -59,7 +69,9 @@ const Modal = ({ currentProj, handleModalToggle, isHome }) => {
                   className="view-repo transition hover"
                 >
                   View Repo
-                  <OpenInNewIcon style={{ height: "2.5vh" }} />
+                  <OpenInNewIcon
+                    style={{ height: "2.5vh", paddingBottom: "0.25vh" }}
+                  />
                 </a>
                 <ul className="flex gap-2">
                   {currentProj.builtWithArray.map((item, index) => (

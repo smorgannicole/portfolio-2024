@@ -90,6 +90,7 @@ const App = () => {
   useEffect(() => {
     if (location.pathname === "/") {
       setIsHome(true)
+      setIsGrid(true)
     } else {
       setIsHome(false)
     }
@@ -99,6 +100,8 @@ const App = () => {
     } else {
       setToggleShow(false)
     }
+    document.body.className =
+      location.pathname === "/About" ? "body-other" : "body-home"
   }, [location.pathname])
 
   const projects = useMemo(
@@ -112,6 +115,18 @@ const App = () => {
         builtWithArray: ["React", "Rails", "Reactstrap"],
         image: vibeVillasPath,
         images: [vibeVillasPath, vv1, vv3, vv4, vv5],
+        palette: [
+          "#DFAD9D",
+          "#F2C29D",
+          "#775455",
+          "#B4795A",
+          "#874C2C",
+          "#4C3C38",
+          "#957765",
+          "#FFFFFF",
+          "#F4D1A9",
+          "#E5C6A8",
+        ],
         repoUrl:
           "https://github.com/learn-academy-2024-alpha/apartment-app-frontend-the-smiths",
         description: (
@@ -143,12 +158,33 @@ const App = () => {
         builtWithArray: ["React", "SCSS"],
         image: phoPath,
         images: [phoPath, pho2, pho3, pho4],
+        palette: [
+          "#191E32",
+          "#D7BFD7",
+          "#6A5044",
+          "#AED5F0",
+          "#191D32",
+          "#7B7A77",
+          "#A69E91",
+          "#131933",
+          "#F9C3BE",
+          "#94E891",
+        ],
         repoUrl: "https://github.com/smorgannicole/simple-as-pho",
         description: (
           <span>
             A React app where users can add and delete items from their carts.
-            Interactive modals showcase food items illustrated using Adobe
-            Fresco.
+            Interactive modals showcase food items illustrated using{" "}
+            <a
+              className="text-gray-500"
+              href="https://www.adobe.com/products/fresco.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              Adobe Fresco
+            </a>
+            .
           </span>
         ),
       },
@@ -163,6 +199,18 @@ const App = () => {
         repoUrl:
           "https://github.com/learn-academy-2024-alpha/cat-tinder-frontend-ryan-amir-morgan",
         images: [catTinderPath, tinder1, tinder2, tinder3, tinder4, tinder5],
+        palette: [
+          "#212124",
+          "#1C1E1F",
+          "#333132",
+          "#5F5957",
+          "#232424",
+          "#1D1E20",
+          "#AD922A",
+          "#1B1D1E",
+          "#E8D32F",
+          "#22201F",
+        ],
         description: (
           <span>
             A full-stack, decoupled application with a PostgreSQL database.
@@ -191,7 +239,7 @@ const App = () => {
         ),
       },
       {
-        id: 6,
+        id: 7,
         alt: "tic tac toe game",
         date: "Mar. 2024",
         title: "Sidewalk tic-tac-toe",
@@ -199,6 +247,18 @@ const App = () => {
         builtWithArray: ["React"],
         image: ticTacToePath,
         images: [ticTacToePath, ttt2, ttt3, ttt4, ttt5, ttt6],
+        palette: [
+          "#D5C993",
+          "#F3F3F3",
+          "#A6A6A6",
+          "#8C8C8C",
+          "#D9945A",
+          "#B2B3B1",
+          "#D4D4D4",
+          "#898A87",
+          "#AEC597",
+          "#C86060",
+        ],
         repoUrl: "https://github.com/smorgannicole/sidewalk-tic-tac-toe",
         description: (
           <span>
@@ -218,7 +278,7 @@ const App = () => {
         ),
       },
       {
-        id: 4,
+        id: 13,
         alt: "hood dreams text-based game",
         date: "Mar. 2024",
         title: "Hood Dreams",
@@ -226,6 +286,18 @@ const App = () => {
         builtWithArray: ["Ruby"],
         image: hoodDreamPath,
         images: [dreams1, dreams2, dreams3, dreams4],
+        palette: [
+          "#1E1E1E",
+          "#1E1E1E",
+          "#464646",
+          "#1E1E1E",
+          "#232323",
+          "#1E1E1E",
+          "#9E9E9E",
+          "#202020",
+          "#252525",
+          "#222222",
+        ],
         repoUrl:
           "https://github.com/learn-academy-2024-alpha/text-based-game-team-ms",
         description: (
@@ -247,7 +319,7 @@ const App = () => {
         ),
       },
       {
-        id: 7,
+        id: 8,
         alt: "robo active listening",
         date: "Feb. 2024",
         title: "Active Listening",
@@ -255,6 +327,18 @@ const App = () => {
         builtWithArray: ["React"],
         image: robo6,
         images: [robo1, robo2, robo3, robo4, robo5, robo6],
+        palette: [
+          "#131112",
+          "#E8C7D7",
+          "#DDC0DE",
+          "#937F90",
+          "#BFD657",
+          "#D2B9E7",
+          "#FEFEFE",
+          "#5B4B52",
+          "#75656D",
+          "#C7B2F1",
+        ],
         repoUrl: "https://github.com/smorgannicole/robo-ear",
         description: (
           <span>
@@ -285,6 +369,18 @@ const App = () => {
         builtWithArray: ["React"],
         image: shroom1,
         images: [shroom1, shroom2, shroom3],
+        palette: [
+          "#D8CDAE",
+          "#D59B74",
+          "#FFFFFE",
+          "#A5CB77",
+          "#86B548",
+          "#F25A42",
+          "#FDC10A",
+          "#9EC25C",
+          "#1818CF",
+          "#F6F8F1",
+        ],
         repoUrl:
           "https://github.com/learn-academy-2024-alpha/treasure-hunt-smorgannicole",
         description: (
@@ -298,7 +394,7 @@ const App = () => {
         ),
       },
       {
-        id: 13,
+        id: 4,
         alt: "pig latin translator",
         date: "Feb. 2024",
         title: "Pig Latin Translator",
@@ -306,6 +402,18 @@ const App = () => {
         builtWithArray: ["React", "Tailwind"],
         image: pig4,
         images: [pig1, pig2, pig3, pig4],
+        palette: [
+          "#DFCBD4",
+          "#4A4849",
+          "#F6EDF1",
+          "#CAC2C5",
+          "#0E0E0E",
+          "#B8B0AF",
+          "#7C7779",
+          "#000000",
+          "#F7E5E8",
+          "#E0CDD5",
+        ],
         repoUrl: "https://github.com/smorgannicole/pig-latin-translator",
         description: (
           <span>
@@ -323,6 +431,18 @@ const App = () => {
         builtWithArray: ["React"],
         image: roll1,
         images: [roll1, roll2, roll3, roll4, roll5],
+        palette: [
+          "#2A2B27",
+          "#F5F5F6",
+          "#E5DDE3",
+          "#F5F6F7",
+          "#BEB3C7",
+          "#ABD4E6",
+          "#9BB14C",
+          "#F9FAFA",
+          "#969491",
+          "#E4CEC0",
+        ],
         repoUrl: "https://github.com/smorgannicole/dice-roll",
         description: (
           <span>
@@ -334,7 +454,7 @@ const App = () => {
         ),
       },
       {
-        id: 5,
+        id: 6,
         alt: "tea react project",
         date: "Dec. 2023",
         title: "Tea House",
@@ -342,6 +462,18 @@ const App = () => {
         builtWithArray: ["React", "Boonaki Tea API"],
         image: teaPath,
         images: [teaPath, t1, t2, t3],
+        palette: [
+          "#AFB18D",
+          "#D2CFB7",
+          "#F0EEE9",
+          "#F4F5F7",
+          "#969C6E",
+          "#69807D",
+          "#F5F0DA",
+          "#D9C591",
+          "#A66E57",
+          "#869272",
+        ],
         repoUrl: "https://github.com/smorgannicole/tea-react-project",
         description: (
           <span>
@@ -351,7 +483,7 @@ const App = () => {
         ),
       },
       {
-        id: 8,
+        id: 5,
         alt: "cosmic coffee",
         date: "Nov. 2023",
         title: "Cosmic Coffee",
@@ -359,6 +491,18 @@ const App = () => {
         builtWithArray: ["JS"],
         image: cc1,
         images: [cc1, cc2, cc3, cc4, cc5, cc6, cc7],
+        palette: [
+          "#E7C7D0",
+          "#F1E5E0",
+          "#CED6E5",
+          "#F0E7E4",
+          "#E5CDD4",
+          "#B1BFD9",
+          "#ECDBDA",
+          "#ffff",
+          "#000",
+          "#99A3C9",
+        ],
         repoUrl: "https://github.com/pennington-smith/coffee-project",
         description: (
           <span>
@@ -388,13 +532,25 @@ const App = () => {
         builtWithArray: ["JS", "OpenWeather API", "Mapbox API"],
         image: map1,
         images: [map1, map2, map3, map4],
+        palette: [
+          "#CFD0E0",
+          "#FEFEFE",
+          "#4E0295",
+          "#6EBAF6",
+          "#530C9A",
+          "#B7DDFB",
+          "#B798D4",
+          "#B7AFCC",
+          "#AFCBE8",
+          "#672CA4",
+        ],
         repoUrl:
           "https://github.com/smorgannicole/codeup-web-exercises/blob/main/js/weather_map.js",
         description: (
           <span>
             Built using HTML, CSS, and JavaScript. OpenWeatherMap API is used to
             display weather info in a specific location. Users can search for
-            desired locations with the forecast updating dynamically. Mapbox API
+            desired locations with the forecast updated dynamically. Mapbox API
             is used to visually transition from the previous location to the
             newly searched one.
           </span>
@@ -409,6 +565,18 @@ const App = () => {
         builtWithArray: ["JS"],
         image: ajax1,
         images: [ajax1, ajax2, ajax3, ajax4, ajax5, ajax6],
+        palette: [
+          "#212532",
+          "#EBDAAB",
+          "#191C27",
+          "#9F988C",
+          "#616D80",
+          "#F7D54E",
+          "#5A5F6B",
+          "#010101",
+          "#292E3C",
+          "#664746",
+        ],
         repoUrl:
           "https://github.com/smorgannicole/codeup-web-exercises/blob/main/data/ajax-store.html",
         description: (
@@ -420,7 +588,7 @@ const App = () => {
         ),
       },
       {
-        id: 14,
+        id: 9.5,
         alt: "media query",
         date: "Oct. 2023",
         title: "Park City",
@@ -428,6 +596,18 @@ const App = () => {
         builtWithArray: ["HTML", "CSS", "Bootstrap"],
         image: media1,
         images: [media1, media2, media3, media4, media5, media6, media7],
+        palette: [
+          "#C6D2DB",
+          "#DDDFE0",
+          "#F0EFEF",
+          "#242626",
+          "#EC9B3A",
+          "#C5C2BD",
+          "#E55739",
+          "#34352F",
+          "#16A3AB",
+          "#7AB06C",
+        ],
         repoUrl:
           "https://github.com/smorgannicole/codeup-web-exercises/blob/main/css/media-queries-exercise.css",
         description: (
@@ -453,10 +633,11 @@ const App = () => {
           <div
             className="w-4/5"
             style={{
-              height: "fit-content",
               overflowY: "scroll",
               padding: "0 1.5vw",
               paddingBottom: "4.5vh",
+              alignItems: location.pathname === "/About" ? "end" : "",
+              display: location.pathname === "/About" ? "flex" : "",
             }}
           >
             <div

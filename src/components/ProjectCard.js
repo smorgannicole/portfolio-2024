@@ -45,13 +45,24 @@ const ProjectCard = ({ projects, isHome }) => {
       {imagesLoaded ? (
         <div className="card-cont columns-1 gap-10 sm:columns-2 lg:columns-3">
           {sortedProjects.map((project) => (
-            <img
-              className="thumbnail"
-              src={project.image}
-              alt={project.alt}
+            <div
               key={project.id}
-              onClick={() => handleModalToggle(project)}
-            />
+              style={{
+                paddingTop:
+                  project.title === "Tea House"
+                    ? "13.5vh"
+                    : project.title === "Simple as Pho"
+                    ? "27vh"
+                    : "0",
+              }}
+            >
+              <img
+                className="thumbnail"
+                src={project.image}
+                alt={project.alt}
+                onClick={() => handleModalToggle(project)}
+              />
+            </div>
           ))}
           {modalOpen && (
             <Modal

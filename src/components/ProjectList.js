@@ -27,7 +27,7 @@ const ProjectList = ({ projects }) => {
             justifyContent: "flex-end",
           }}
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div
               className="unified-length"
               style={{ width: "100%", justifyContent: "end" }}
@@ -62,10 +62,10 @@ const ProjectList = ({ projects }) => {
                   className="color-hover color-transition"
                   style={{ cursor: "pointer" }}
                 >
-                  <span style={{ fontSize: 12, fontWeight: 900 }}>
+                  <span style={{ fontSize: "1.75vh", fontWeight: 900 }}>
                     {project.date} / {project.builtWith} /{" "}
                   </span>
-                  <span style={{ fontSize: 46, fontWeight: 100 }}>
+                  <span style={{ fontSize: "6vh", fontWeight: 100 }}>
                     {project.title}
                   </span>
                 </span>
