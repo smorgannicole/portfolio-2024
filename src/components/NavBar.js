@@ -17,7 +17,10 @@ const NavBar = ({ setIsGrid }) => {
       <div className="nav-elements bg-none">
         <div className="flex mb-5 mt-6">
           <NavLink to="/" onClick={() => setIsGrid(true)}>
-            <span className="text-3xl" style={{ color: "black" }}>
+            <span
+              className="text-3xl"
+              style={{ color: "black", fontSize: "3.75vh" }}
+            >
               Morgan
               <br />
               Smith
@@ -31,12 +34,15 @@ const NavBar = ({ setIsGrid }) => {
                 className={`color-hover color-transition ${
                   projectsActive ? "active" : ""
                 }`}
+                style={{ fontSize: "2vh" }}
               >
                 Projects
                 {projectsActive && (
                   <span>
                     {" "}
-                    <AutoAwesomeIcon style={{ paddingBottom: "0.25vh" }} />
+                    <AutoAwesomeIcon
+                      style={{ paddingBottom: "0.25vh", fontSize: "2.5vh" }}
+                    />
                   </span>
                 )}
               </span>
@@ -48,13 +54,16 @@ const NavBar = ({ setIsGrid }) => {
                 }`}
                 style={{
                   color: location.pathname === "/About" ? "#AFA195" : "",
+                  fontSize: "2vh",
                 }}
               >
                 About
                 {aboutActive && (
                   <span>
                     {" "}
-                    <AutoAwesomeIcon style={{ paddingBottom: "0.25vh" }} />
+                    <AutoAwesomeIcon
+                      style={{ paddingBottom: "0.25vh", fontSize: "2.5vh" }}
+                    />
                   </span>
                 )}
               </span>
@@ -64,12 +73,15 @@ const NavBar = ({ setIsGrid }) => {
                 className={`color-hover color-transition  ${
                   contactActive ? "active" : ""
                 }`}
+                style={{ fontSize: "2vh" }}
               >
                 Contact
                 {contactActive && (
                   <span>
                     {" "}
-                    <AutoAwesomeIcon style={{ paddingBottom: "0.25vh" }} />
+                    <AutoAwesomeIcon
+                      style={{ paddingBottom: "0.25vh", fontSize: "2.5vh" }}
+                    />
                   </span>
                 )}
               </span>

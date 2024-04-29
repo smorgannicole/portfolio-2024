@@ -160,7 +160,7 @@ html {
 .map-list-img {
   width: 290px;
   position: absolute;
-  left: -20vw;
+  left: -19vw;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
   transition: opacity 0.3s ease;
 }
