@@ -1,5 +1,6 @@
 import React from "react"
 import OpenInNewIcon from "@mui/icons-material/OpenInNew"
+import Footer from "./Footer"
 
 const Contact = () => {
   return (
@@ -60,6 +61,7 @@ const Contact = () => {
             </a>
           </p>
         </div>
+        <Footer />
       </div>
     </>
   )

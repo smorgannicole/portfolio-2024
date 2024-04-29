@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome"
 import itsame from "../images/itsame.jpg"
 
 const About = () => {
+  const [showBadge, setShowBadge] = useState(false)
+
   const palette = [
     "#2173B5",
     "#987A70",
@@ -62,7 +64,17 @@ const About = () => {
             className="me"
             src={itsame}
             alt="Morgan in front of a blue sculpture"
+            onMouseEnter={() => setShowBadge(true)}
+            onMouseLeave={() => setShowBadge(false)}
           />
+          {showBadge && (
+            <span
+              className="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 location-badge"
+              onMouseEnter={() => setShowBadge(true)}
+            >
+              Miami, Florida
+            </span>
+          )}
         </div>
         <div className="flex about-palette">
           {palette.map((color, index) => (
