@@ -20,19 +20,20 @@ const About = () => {
   return (
     <>
       <div className="about-cont">
-        <h1 style={{ fontSize: "7vh" }}>
-          <span style={{ color: "#AFA195" }}>
+        <h1 className="about-h1" style={{ fontSize: "7vh" }}>
+          <span className="about-lg-text" style={{ color: "#AFA195" }}>
             <AutoAwesomeIcon
+              className="about-svg"
               style={{ fontSize: "6vh", paddingBottom: "1vh" }}
             />{" "}
             I'm Morgan,
           </span>{" "}
-          <span style={{ fontSize: "4vh" }}>
+          <span className="about-md-text" style={{ fontSize: "4vh" }}>
             {" "}
             a frontend developer in Austin, Texas
           </span>
         </h1>
-        <div className="flex" style={{ justifyContent: "end" }}>
+        <div className="for-ipad-layout flex" style={{ justifyContent: "end" }}>
           <div
             className="flex"
             style={{
@@ -43,21 +44,28 @@ const About = () => {
             {/* <p style={{ fontSize: "2.75vh", marginBottom: "1vh" }}>
               My interest lies in creating interesting, user-centric interfaces.
             </p> */}
-            <p style={{ fontSize: "2.1vh", marginBottom: "1vh" }}>
-              I was first introduced to coding in my CS Fundamentals class
-              during my second year of college— I finished with a C. Five years
-              later I attended both Codeup and LEARN Academy, full stack web
-              development bootcamps. Despite Codeup's closure midway through the
-              course, I was able to further solidify my skills in frontend
-              languages such as HTML, CSS, JavaScript, and React during my time
-              at LEARN Academy. If I went back now, I'd like to think I could
-              make at least a B in CS Fundamentals.
+            <p
+              className="about-sm-text"
+              style={{ fontSize: "2.1vh", marginBottom: "1vh" }}
+            >
+              <span style={{ paddingLeft: "2vw" }}>
+                I was first introduced to coding in my CS Fundamentals class
+                during my second year of college— I finished with a C.
+              </span>{" "}
+              Five years later I attended both Codeup and LEARN Academy's full
+              stack web development bootcamps. Despite Codeup's closure midway
+              through the course, my time at LEARN Academy reinforced my skills
+              in frontend languages like HTML, CSS, JavaScript, and React. If I
+              went back now, I'd like to think I could make at least a B in CS
+              Fundamentals.
             </p>
-            <p style={{ fontSize: "2.1vh" }}>
-              Outside work, I enjoy friendly games of chess (add me on chess.com
-              @smorgannicole), any spectator sport, live music, discovering the
-              magic of the world with my partner, and spending quality time with
-              my animals.
+            <p className="about-sm-text" style={{ fontSize: "2.1vh" }}>
+              <span style={{ paddingLeft: "2vw" }}>
+                Outside work, I enjoy friendly games of chess (add me on
+                chess.com @smorgannicole), any spectator sport, live music,
+                discovering the magic of the world with my partner, and spending
+                quality time with my animals.
+              </span>{" "}
             </p>
           </div>
           <img

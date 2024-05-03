@@ -18,11 +18,19 @@ const NavBar = ({ setIsGrid }) => {
         <div className="flex mb-5 mt-6">
           <NavLink to="/" onClick={() => setIsGrid(true)}>
             <span
+              className="text-3xl first-name"
+              style={{
+                color: "black",
+                fontSize: "3.75vh",
+                display: "block",
+              }}
+            >
+              Morgan
+            </span>
+            <span
               className="text-3xl"
               style={{ color: "black", fontSize: "3.75vh" }}
             >
-              Morgan
-              <br />
               Smith
             </span>
           </NavLink>
@@ -31,7 +39,7 @@ const NavBar = ({ setIsGrid }) => {
           <ul className="flex flex-col gap-1">
             <NavLink to="/">
               <span
-                className={`color-hover color-transition ${
+                className={`navie color-hover color-transition ${
                   projectsActive ? "active" : ""
                 }`}
                 style={{ fontSize: "2vh" }}
@@ -49,7 +57,7 @@ const NavBar = ({ setIsGrid }) => {
             </NavLink>
             <NavLink to="/About">
               <span
-                className={`color-hover color-transition  ${
+                className={`navie color-hover color-transition  ${
                   aboutActive ? "active" : ""
                 }`}
                 style={{
@@ -70,7 +78,7 @@ const NavBar = ({ setIsGrid }) => {
             </NavLink>
             <NavLink to="/Contact">
               <span
-                className={`color-hover color-transition  ${
+                className={`navie color-hover color-transition  ${
                   contactActive ? "active" : ""
                 }`}
                 style={{ fontSize: "2vh" }}

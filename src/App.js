@@ -631,7 +631,7 @@ const App = () => {
             <NavBar setIsGrid={setIsGrid} />
           </div>
           <div
-            className="w-4/5"
+            className="w-4/5 larger-sect"
             style={{
               padding: "0 1.5vw",
               paddingBottom: "4.5vh",

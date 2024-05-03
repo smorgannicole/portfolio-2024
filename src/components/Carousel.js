@@ -40,14 +40,27 @@ class MyCarousel extends React.Component {
                 ))}
             </Slider>
           </div>
-          <div className="controls">
-            <ButtonBack className="btn-arrow reverse-arrow">
-              <img src={arrow} alt="arrow" className="transition hover" />
-            </ButtonBack>
-            <DotGroup className="dot-group" />
-            <ButtonNext className="btn-arrow reg-arrow">
-              <img src={arrow} alt="arrow" className="transition hover" />
-            </ButtonNext>
+          <div className="dots-cont">
+            <div className="controls">
+              <ButtonBack className="btn-arrow reverse-arrow">
+                <img
+                  src={arrow}
+                  alt="arrow"
+                  className="transition hover arrow-img"
+                  style={{ height: "3.25vh" }}
+                />
+              </ButtonBack>
+
+              <DotGroup className="dot-group" />
+              <ButtonNext className="btn-arrow reg-arrow">
+                <img
+                  src={arrow}
+                  alt="arrow"
+                  className="transition hover arrow-img"
+                  style={{ height: "3.25vh" }}
+                />
+              </ButtonNext>
+            </div>
           </div>
         </CarouselProvider>
       </CarouselWrapper>

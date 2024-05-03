@@ -17,13 +17,16 @@ const Contact = () => {
         >
           <p>
             <a
-              className="transition hover"
+              className="transition hover contact-anchor"
               href="https://github.com/smorgannicole"
               target="_blank"
               rel="noreferrer"
               style={{ fontSize: "6vh", fontWeight: 100 }}
             >
-              <span style={{ fontSize: "1.75vh", fontWeight: 900 }}>
+              <span
+                className="contact-span"
+                style={{ fontSize: "1.75vh", fontWeight: 900 }}
+              >
                 github.com/smorgannicole
                 <OpenInNewIcon style={{ height: "1.75vh" }} />/{" "}
               </span>
@@ -32,13 +35,16 @@ const Contact = () => {
           </p>
           <p>
             <a
-              className="transition hover"
+              className="transition hover contact-anchor"
               href="https://www.linkedin.com/in/morgansmith13/"
               target="_blank"
               rel="noreferrer"
               style={{ fontSize: "6vh", fontWeight: 100 }}
             >
-              <span style={{ fontSize: "1.75vh", fontWeight: 900 }}>
+              <span
+                className="contact-span"
+                style={{ fontSize: "1.75vh", fontWeight: 900 }}
+              >
                 linkedin.com/in/morgansmith13
                 <OpenInNewIcon style={{ height: "1.75vh" }} />/{" "}
               </span>
@@ -47,13 +53,16 @@ const Contact = () => {
           </p>
           <p>
             <a
-              className="transition hover"
+              className="transition hover contact-anchor"
               href="mailto:smorgannicole@gmail.com?subject=Hi%20Morgan&body=%20I%20just%20wanted%20to%20say..."
               target="_blank"
               rel="noreferrer"
               style={{ fontSize: "6vh", fontWeight: 100 }}
             >
-              <span style={{ fontSize: "1.75vh", fontWeight: 900 }}>
+              <span
+                className="contact-span"
+                style={{ fontSize: "1.75vh", fontWeight: 900 }}
+              >
                 smorgannicole@gmail.com
                 <OpenInNewIcon style={{ height: "1.75vh" }} />/{" "}
               </span>

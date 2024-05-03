@@ -13,11 +13,19 @@ export const CarouselWrapper = styled.div`
     justify-content: center;
   }
 
+  .dots-cont {
+    position: fixed;
+    bottom: 13.5vh;
+    left: 22.5vw;
+    width: 55vw;
+    display: flex;
+    justify-content: center;
+  }
+
   .controls {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     top: 46.5vh;
     left: 22vw;
 

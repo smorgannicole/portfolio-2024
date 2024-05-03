@@ -43,7 +43,7 @@ const ProjectCard = ({ projects, isHome }) => {
   return (
     <>
       {imagesLoaded ? (
-        <div className="card-cont columns-1 gap-10 sm:columns-2 lg:columns-3">
+        <div className="card-cont columns-1 sm:columns-2 lg:columns-3">
           {sortedProjects.map((project) => (
             <div
               key={project.id}
@@ -55,6 +55,7 @@ const ProjectCard = ({ projects, isHome }) => {
                     ? "27vh"
                     : "0",
               }}
+              className="img-padding"
             >
               <img
                 className="thumbnail"

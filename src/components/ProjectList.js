@@ -62,10 +62,16 @@ const ProjectList = ({ projects }) => {
                   className="color-hover color-transition"
                   style={{ cursor: "pointer" }}
                 >
-                  <span style={{ fontSize: "1.75vh", fontWeight: 900 }}>
+                  <span
+                    className="list-deets"
+                    style={{ fontSize: "1.75vh", fontWeight: 900 }}
+                  >
                     {project.date} / {project.builtWith} /{" "}
                   </span>
-                  <span style={{ fontSize: "6vh", fontWeight: 100 }}>
+                  <span
+                    className="list-title"
+                    style={{ fontSize: "6vh", fontWeight: 100 }}
+                  >
                     {project.title}
                   </span>
                 </span>

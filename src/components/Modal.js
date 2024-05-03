@@ -35,11 +35,12 @@ const Modal = ({ currentProj, handleModalToggle, isHome }) => {
                   height: "2vh",
                   width: "5.5vw",
                 }}
+                className="square"
               ></div>
             ))}
           </div>
           <div
-            className="flex mt-1"
+            className="flex mt-1 mod-text-cont"
             style={{ width: "100%", position: "relative", height: "20vh" }}
           >
             <FontAwesomeIcon
@@ -77,8 +78,12 @@ const Modal = ({ currentProj, handleModalToggle, isHome }) => {
                   {currentProj.builtWithArray.map((item, index) => (
                     <li key={index}>
                       <span
-                        className="inline-flex items-center rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10"
-                        style={{ backgroundColor: "#d1c5b6" }}
+                        className="inline-flex items-center rounded-md bg-gray-100 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 badgy"
+                        style={{
+                          backgroundColor: "#d1c5b6",
+                          padding: "0.5vh 0.75vw",
+                          fontSize: "1.5vh",
+                        }}
                       >
                         {item}
                       </span>
@@ -91,7 +96,7 @@ const Modal = ({ currentProj, handleModalToggle, isHome }) => {
                   fontSize: "1.9vh",
                   alignItems: "center",
                 }}
-                className="flex w-3/5"
+                className="flex w-3/5 description"
               >
                 {currentProj.description}
               </div>
