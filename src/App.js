@@ -663,7 +663,11 @@ const App = () => {
                 href="https://smorgannicole.netlify.app/"
                 target="_blank"
                 rel="noreferrer"
-                className="underline text-pink-550"
+                className={
+                  location.pathname === "/About"
+                    ? "underline text-blue-50"
+                    : "underline text-pink-550"
+                }
               >
                 here
               </a>
