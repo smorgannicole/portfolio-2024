@@ -625,7 +625,7 @@ const App = () => {
 
   return (
     <>
-      <div className="page-wrapper">
+      <div className="page-wrapper relative">
         <div className="border flex" style={{ overflowY: "scroll" }}>
           <div className="w-1/5">
             <NavBar setIsGrid={setIsGrid} />
@@ -657,6 +657,17 @@ const App = () => {
               <Route path="/About" element={<About />} />
               <Route path="/Contact" element={<Contact />} />
             </Routes>
+            <p className="absolute bottom-0 right-7">
+              You can find my most updated portfolio{" "}
+              <a
+                href="https://smorgannicole.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+                className="underline text-pink-550"
+              >
+                here
+              </a>
+            </p>
           </div>
         </div>
       </div>
